@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MainPage</title>
+    <link rel="stylesheet" type="text/css" href="{{ main_css_file_path }}styles.css">
+</head>
+<body {% block bodytheme %}class="theme-night"{% endblock %}> <!-- Установите тему по умолчанию -->
+{% block header %}<h1>ПРИВЕТ ДРУГ, КАК ДЕЛА? <br><br> НЕ ЛЕНИСЬ!</h1>{% endblock %}
+{% block auth %}
+<!--        {% if isAuth %}-->
+<!--        <h1>Добро утро, {{ user_name }}! ваш пароль {{ user_password }}</h1>-->
+<!--        {% else %}-->
+        <div class="auth_buttons">
+            <a href="/reg"><button class="register"><span class="layer-footer-action" data-action="send" contenteditable="true">Зарегистрироваться</span></button></a>
+            <a href="/log"><button class="login"><span class="layer-footer-action" data-action="send" contenteditable="true">Войти</span></button></a>
+        </div>
+<!--        {% endif %}-->
+{% endblock %}
+</body>
+<script {% block script %} src="{{ main_js_file_path }}mainPage.js" type="text/javascript" {% endblock %}></script>
+</html>

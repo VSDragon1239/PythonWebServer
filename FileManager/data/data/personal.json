@@ -1,0 +1,28 @@
+{
+    "staff": [
+        {
+            "image": "TwilightSparkle.png",
+            "name": "Twilight Sparkle",
+            "role": "Princess of Friendship",
+            "location": "Canterlot Castle"
+        },
+        {
+            "image": "PrincessCelestia.jpg",
+            "name": "Celestia",
+            "role": "Ruler of Equestria",
+            "location": "Canterlot Castle"
+        },
+        {
+            "image": "i1.jpg",
+            "name": "Number1",
+            "role": "Role1",
+            "location": "Canterlot Castle"
+        },
+        {
+            "image": "PrincessLuna.jpg",
+            "name": "Luna",
+            "role": "Princess of the Night",
+            "location": "Canterlot Castle"
+        }
+    ]
+}

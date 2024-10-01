@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ main_css_file_path }}styles.css">
+    {% block title %}Authorization{% endblock %}
+</head>
+{% extends 'FileManager/pages/template/mainBlock.html' %}
+
+{% block bodytheme %}class="theme-night"{% endblock %}
+
+{% block header %}
+    <h1>
+        {% if authPath=="/log" %}Вход в аккаунт{% elif authPath=='/reg' %}Регистрация аккаунта{% else %}Вы тут впервые? {% endif %}
+    </h1>
+{% endblock %}
+
+{% block auth %}
+    {% if authPath=="/log" %}
+        <form action="/log" method="post">
+            <input type="text" name="username" placeholder="Имя пользователя" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <input type="submit" value="Войти">
+        </form>
+    {% elif authPath=='/reg' %}
+        <form action="/reg" method="post">
+            <input type="text" name="username" placeholder="Имя пользователя" required>
+            <input type="email" name="email" placeholder="Электронная почта" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <input type="password" name="confirm_password" placeholder="Подтверждение пароля" required>
+            <input type="submit" value="Зарегистрироваться">
+        </form>
+    {% endif %}
+{% endblock %}
+
+<script {% block script %} src="{{ main_js_file_path }}mainPage.js" type="text/javascript" {% endblock %}></script>
+</html>

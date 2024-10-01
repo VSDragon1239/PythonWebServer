@@ -1,0 +1,97 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    background-image: var(--background-image); /* Используем переменную для фонового изображения */
+    background-size: cover; /* Подгоняет изображение под размер элемента */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Не повторяет изображение */
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s, background-image 0.3s; /* Переход для фона */
+}
+
+h1 {
+    text-align: center;
+}
+
+.auth {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.auth_buttons {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    background: var(--card-background);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.filters {
+    margin: 16px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-background);
+    color: var(--button-hover-text);
+}
+
+/* Оранжевая тема (огонь и пламя) */
+.theme-fire {
+    --background-color: #ff5722;
+    --text-color: #000000;
+    --background-image: url('/FileManager/static/images/fire-background.png');
+    --border-color: #ff9800;
+    --card-background: #ff9800;
+    --button-background: #ff9800;
+    --button-text: #ffffff;
+    --button-hover-background: #e64a19;
+    --button-hover-text: #ffffff;
+}
+
+/* Иссине-тёмная тема (ночь и луна) */
+.theme-night {
+    --background-color: #002f6c;
+    --background-image: url('/FileManager/static/images/night-background.png');
+    --text-color: #e0f7fa;
+    --border-color: #003a81;
+    --card-background: #003c8f;
+    --button-background: #00377c;
+    --button-text: #e0f7fa;
+    --button-hover-background: #00439d;
+    --button-hover-text: #e0f7fa;
+}

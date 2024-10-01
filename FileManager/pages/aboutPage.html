@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ main_css_file_path }}styles.css">
+    {% block title %}About Canterlot Castle{% endblock %}
+</head>
+{% extends 'FileManager/pages/template/mainBlock.html' %}
+
+{% block bodytheme %}class="theme-night"{% endblock %}
+
+{% block header %}<h1>Staff of Canterlot Castle</h1>{% endblock %}
+
+{% block auth %}
+        <h1>Добро утро, {{ user_name }}! ваш пароль {{ user_password }}</h1>
+        <div class="auth_buttons">
+<!--            <button class="register" onclick="changeTheme('theme-night')">Зарегистрироваться</button>-->
+<!--            <button class="login" onclick="changeTheme('theme-night')">Войти</button>-->
+            <a href="/reg"><button class="register"><span class="layer-footer-action" data-action="send" contenteditable="true">Зарегистрироваться</span></button></a>
+            <a href="/log"><button class="login"><span class="layer-footer-action" data-action="send" contenteditable="true">Войти</span></button></a>
+        </div>
+{% endblock %}
+
+{% block filters %}<div class="filters">
+          <label for="filter">Filter by name:</label>
+          <input type="text" id="filter" placeholder="Type name...">
+
+          <label for="sort">Sort by:</label>
+          <select id="sort">
+              <option value="asc">A-Z</option>
+              <option value="desc">Z-A</option>
+          </select>
+          <button onclick="changeTheme('theme-fire')">Fire Theme</button>
+          <button onclick="changeTheme('theme-night')">Night Theme</button>
+      </div>{% endblock %}
+
+{% block staff_container %}<div id="staff-container">
+<!--    {% for member in staff %}-->
+<!--        <div class="card" data-name="{{ member.name }}">-->
+<!--            <img src="{{ path + member.image }}" alt="{{ member.name }}">-->
+<!--            <h3>{{ member.name }}</h3>-->
+<!--            <p>{{ member.role }}</p>-->
+<!--            <p>{{ member.location }}</p>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+    </div>{% endblock %}
+
+<script {% block script %} src="{{ main_js_file_path }}mainPage.js" type="text/javascript" {% endblock %}></script>
+</html>

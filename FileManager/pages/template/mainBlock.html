@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body {% block bodytheme %}{% endblock %} >
+<header>{% block header %}{% endblock %}</header>
+
+<div class="auth">{% block auth %}{% endblock %}</div>
+
+<main>{% block filters %}{% endblock %}{% block staff_container %}{% endblock %}</main>
+
+<footer>{% block footer %}{% endblock %}</footer>
+</body>
+<script {% block script %}{% endblock %} ></script>
+</html>
