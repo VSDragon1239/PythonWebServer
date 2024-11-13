@@ -41,5 +41,11 @@ def ConditionPath(path, type):
             return True
         else:
             return False
+    elif type == 'new_template':
+        if path == ArrayPaths[4][1] or path == ArrayPaths[4][2]:
+            return True
+        else:
+            return False
+
     else:
         return False
