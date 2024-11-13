@@ -22,10 +22,8 @@ def render_other(page, send_response, send_header, end_headers, wfile, dataArray
     send_response(200)
     send_header('Content-type', 'text/html')
     end_headers()
-    wfile.write(page[0].render(main_js_file_path=jsFolder, main_css_file_path=cssFolder).encode('utf-8'))
+    wfile.write(page[0].render(main_js_file_path=jsFolder, main_css_file_path=cssFolder, user=dataArray[0]).encode('utf-8'))
 
-    rendered_content = template.render(user=user)  # Передаём параметр user
-    wfile.write(rendered_content.encode('utf-8'))
 
 class Render:
     def __init__(self):

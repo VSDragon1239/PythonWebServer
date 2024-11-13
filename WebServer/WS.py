@@ -28,7 +28,7 @@ class WebServerClass(SimpleHTTPRequestHandler):
         elif ConditionPath(self.path, 'auth'):
             self.authPage = render_auth(getPage(env, 3), self.send_response, self.send_header, self.end_headers, self.wfile, self.path)
 
-        elif ConditionPath(self.path, 'new_template'):
+        elif ConditionPath(parsed_url.path, 'new_template'):
             self.NewTemplatePage = render_other(getPage(env, 4), self.send_response, self.send_header, self.end_headers, self.wfile, self.dataArray)
 
         else:

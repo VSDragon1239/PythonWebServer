@@ -8,10 +8,9 @@
 <body {% block bodytheme %}class="theme-night"{% endblock %}> <!-- Установите тему по умолчанию -->
 {% block header %}<h1>ПРИВЕТ ДРУГ, КАК ДЕЛА? <br><br> НЕ ЛЕНИСЬ!</h1>{% endblock %}
 {% block auth %}
-<!--        {% if isAuth %}-->
-<!--        <h1>Добро утро, {{ user_name }}! ваш пароль {{ user_password }}</h1>-->
-<!--        {% else %}-->
-<!--        {% endif %}-->
+{% endblock %}
+{% block main %}
+<h1>{{ user }}</h1>
 {% endblock %}
 </body>
 <script {% block script %} src="{{ main_js_file_path }}mainPage.js" type="text/javascript" {% endblock %}></script>
